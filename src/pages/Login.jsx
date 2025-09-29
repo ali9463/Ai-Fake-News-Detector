@@ -75,14 +75,6 @@ const Login = () => {
         className="max-w-md w-full space-y-8"
       >
         <div className="text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="mx-auto h-16 w-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6"
-          >
-            <Shield className="h-8 w-8 text-white" />
-          </motion.div>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
             Welcome Back
           </h2>
@@ -118,7 +110,7 @@ const Login = () => {
                 value={formData.email}
                 onChange={handleChange}
                 error={errors.email}
-                placeholder="john@example.com"
+                placeholder="ali@example.com"
                 className="pl-10"
               />
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none mt-6">

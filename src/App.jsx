@@ -2,8 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
-import Navbar from './components/Layout/Navbar';
-import Footer from './components/Layout/Footer';
 import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -25,7 +23,7 @@ const App = () => {
       <AuthProvider>
         <Router>
           <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
-            <Navbar />
+            
             <main className="flex-1">
               <Routes>
                 <Route path="/" element={<Landing />} />
@@ -81,7 +79,6 @@ const App = () => {
                 />
               </Routes>
             </main>
-            <Footer />
           </div>
         </Router>
       </AuthProvider>

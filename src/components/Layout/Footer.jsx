@@ -10,15 +10,12 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-lg">
-                <Shield className="h-6 w-6 text-white" />
-              </div>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
                 Fake News Detector
               </span>
             </Link>
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-              Advanced AI-powered fake news detection platform. Protecting truth in the digital age.
+              Fake news detection platform. Protecting truth in the digital age.
             </p>
             <div className="flex space-x-4">
               <a
@@ -27,13 +24,6 @@ const Footer = () => {
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-blue-500 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
               </a>
               <a
                 href="#"
@@ -53,7 +43,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/dashboard"
+                  to="#"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-sm"
                 >
                   Home
@@ -61,7 +51,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/articles"
+                  to="#"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-sm"
                 >
                   Articles
@@ -69,7 +59,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  to="#"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-sm"
                 >
                   Contact
@@ -126,14 +116,9 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-center items-center">
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              © 2025 Fake News Detector. All rights reserved.
-            </p>
-            <p className="text-gray-600 dark:text-gray-400 text-sm flex items-center space-x-1 mt-2 md:mt-0">
-              <span>Made with</span>
-              <Heart className="h-4 w-4 text-red-500" />
-              <span>for truth and transparency</span>
+              © Copyright 2025 Fake News Detector. All rights reserved.
             </p>
           </div>
         </div>

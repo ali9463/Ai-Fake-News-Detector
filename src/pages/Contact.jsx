@@ -3,17 +3,20 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import Button from '../components/UI/Button';
 import Input from '../components/UI/Input';
+import Navbar from '../components/Layout/Navbar';
+import Footer from '../components/Layout/Footer';
 
 const Contact = () => {
   const contactInfo = [
-    { icon: Mail, title: 'Email Us', content: 'support@Fake News Detector.ai', href: 'mailto:support@Fake News Detector.ai' },
-    { icon: Phone, title: 'Call Us', content: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, title: 'Our Office', content: '123 Truth Avenue, San Francisco, CA', href: '#' },
+    { icon: Mail, title: 'Email Us', content: 'support@Fake News Detector', href: 'mailto:support@Fake News Detector' },
+    { icon: Phone, title: 'Call Us', content: '+923317194063', href: 'tel:+923310159432' },
+    { icon: MapPin, title: 'Our Office', content: 'Barani Institude Rawalpindi', href: '#' },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-2">
+      <Navbar/>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-8 lg:mb-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white">Get in Touch</h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 mt-2">We'd love to hear from you. Let us know how we can help.</p>
@@ -31,8 +34,8 @@ const Contact = () => {
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send us a message</h2>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <Input label="Full Name" name="name" placeholder="John Doe" />
-                  <Input label="Email Address" name="email" type="email" placeholder="john@example.com" />
+                  <Input label="Full Name" name="name" placeholder="Ali Ahmad" />
+                  <Input label="Email Address" name="email" type="email" placeholder="ali@example.com" />
                 </div>
                 <Input label="Subject" name="subject" placeholder="How can we help?" />
                 <div>
@@ -79,6 +82,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

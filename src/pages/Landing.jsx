@@ -26,6 +26,8 @@ import {
 } from 'lucide-react';
 import Button from '../components/UI/Button';
 import Input from '../components/UI/Input';
+import Navbar from '../components/Layout/Navbar';
+import Footer from '../components/Layout/Footer';
 
 const Landing = () => {
   const [newsUrl, setNewsUrl] = useState('');
@@ -60,25 +62,25 @@ const Landing = () => {
     {
       icon: Brain,
       title: 'AI-Powered Detection',
-      description: 'Advanced machine learning algorithms analyse content patterns, source credibility, and linguistic markers to identify misinformation.',
+      description: 'Machine Learning algorithms analyse content patterns, source credibility to identify Fake News.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Clock,
       title: 'Real-time Analysis',
-      description: 'Get instant results with millisecond processing that analyses content in real-time without compromising accuracy.',
+      description: 'Get results with processing that analyses content with accuracy.',
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: Database,
       title: 'Source Verification',
-      description: 'Comprehensive database of trusted sources with real-time credibility scoring and bias detection.',
+      description: 'Database of trusted sources with credibility scoring and bias detection.',
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: BarChart3,
       title: 'Multimedia Verification',
-      description: 'Detect deepfakes, manipulated images, and altered videos using cutting-edge computer vision technology.',
+      description: 'Detect text from images, manipulated images, and find the incorrect or not valid images.',
       color: 'from-orange-500 to-red-500'
     },
     {
@@ -90,7 +92,7 @@ const Landing = () => {
     {
       icon: Shield,
       title: 'Trending Dashboard',
-      description: 'Stay informed about emerging misinformation campaigns and trending fake news patterns.',
+      description: 'Stay informed about emerging fake news campaigns and trending fake news patterns.',
       color: 'from-teal-500 to-blue-500'
     }
   ];
@@ -139,15 +141,9 @@ const Landing = () => {
     }
   ];
 
-  const stats = [
-    { label: '99.6% Accuracy', value: '99.6%' },
-    { label: 'Real-time Results', value: '<1s' },
-    { label: 'Privacy Protected', value: '100%' },
-    { label: 'Always Available', value: '24/7' }
-  ];
-
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
+      <Navbar/>
       {/* Hero Section */}
       <section className="relative py-20 sm:py-32 overflow-hidden bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
         <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-800 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]"></div>
@@ -288,10 +284,10 @@ const Landing = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Powerful Features
+              Our Features
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Comprehensive tools to combat misinformation and promote digital literacy
+              Comprehensive tools to tell you about Fake News which is present in the digital world.
             </p>
           </motion.div>
 
@@ -319,51 +315,6 @@ const Landing = () => {
               );
             })}
           </div>
-        </div>
-      </section>
-
-      {/* Demo Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              See It In Action
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Watch how our AI analyses content and provides detailed verification results
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative max-w-4xl mx-auto"
-          >
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-700">
-              <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center relative">
-                <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop"
-                  alt="Demo Screenshot"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                  <Button
-                    size="lg"
-                    className="bg-white text-gray-900 hover:bg-gray-100"
-                  >
-                    <Play className="mr-2 h-5 w-5" />
-                    Watch Demo
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -424,7 +375,7 @@ const Landing = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Join the Fight Against Misinformation
+              Come and Join the Fake News Detection
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Be part of a community committed to truth and transparency. Start verifying content today and help create a more informed digital world.
@@ -433,23 +384,17 @@ const Landing = () => {
               <Link to="/signup">
                 <Button
                   size="lg"
-                  className="bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto"
+                  className="bg-gradient-to-t from-blue-800 to-purple-800 text-blue-600 hover:bg-gray-100 w-full sm:w-auto"
                 >
                   Get Started Free
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-600 w-full sm:w-auto"
-              >
-                Learn More
-              </Button>
             </div>
           </motion.div>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 };

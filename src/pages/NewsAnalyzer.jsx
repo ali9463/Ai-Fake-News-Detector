@@ -4,6 +4,8 @@ import { Link as LinkIcon, FileText, Upload, Search, CheckCircle, AlertTriangle,
 import Button from '../components/UI/Button';
 import Input from '../components/UI/Input';
 import LoadingSpinner from '../components/UI/LoadingSpinner';
+import Navbar from '../components/Layout/Navbar';
+import Footer from '../components/Layout/Footer';
 
 const NewsAnalyzer = () => {
   const [analysisType, setAnalysisType] = useState('url');
@@ -141,8 +143,9 @@ const NewsAnalyzer = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-2">
+        <Navbar/>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-8 lg:mb-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white">News Analyzer</h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 mt-2">Get instant, AI-powered analysis of any news content.</p>
@@ -245,6 +248,7 @@ const NewsAnalyzer = () => {
           </motion.div>
         )}
       </div>
+      <Footer/>
     </div>
   );
 };

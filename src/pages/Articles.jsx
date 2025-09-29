@@ -4,6 +4,8 @@ import { faker } from '@faker-js/faker';
 import { Search, ChevronDown, User, Calendar, Clock, Eye, Share2, ArrowRight } from 'lucide-react';
 import Button from '../components/UI/Button';
 import Input from '../components/UI/Input';
+import Navbar from '../components/Layout/Navbar';
+import Footer from '../components/Layout/Footer';
 
 const Articles = () => {
   const articles = Array.from({ length: 6 }, () => ({
@@ -52,10 +54,11 @@ const Articles = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <div className="relative bg-gray-800 py-24 sm:py-32">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 ">
+      <Navbar/>
+      <div className="relative bg-gray-800 py-24 sm:py-32 lg:mt-8">
         <img
-          src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=1400"
+          src="https://t4.ftcdn.net/jpg/05/65/56/73/360_F_565567342_28W7zxxmagIhQ08d6RfsdCqNMIJfCSNu.jpg"
           alt="Abstract network"
           className="absolute inset-0 w-full h-full object-cover opacity-20"
         />
@@ -108,6 +111,7 @@ const Articles = () => {
           </form>
         </motion.div>
       </div>
+      <Footer/>
     </div>
   );
 };

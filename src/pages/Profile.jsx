@@ -16,6 +16,8 @@ import { useAuth } from '../contexts/AuthContext';
 import Button from '../components/UI/Button';
 import Input from '../components/UI/Input';
 import { faker } from '@faker-js/faker';
+import Navbar from '../components/Layout/Navbar';
+import Footer from '../components/Layout/Footer';
 
 const Profile = () => {
   const { user } = useAuth();
@@ -314,8 +316,9 @@ const Profile = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-2">
+      <Navbar/>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:mt-8 lg:mb-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -367,6 +370,7 @@ const Profile = () => {
           {activeTab === 'settings' && renderSettings()}
         </motion.div>
       </div>
+      <Footer/>
     </div>
   );
 };

@@ -16,6 +16,8 @@ import { useAuth } from '../contexts/AuthContext';
 import Button from '../components/UI/Button';
 import Input from '../components/UI/Input';
 import { faker } from '@faker-js/faker';
+import Navbar from '../components/Layout/Navbar';
+import Footer from '../components/Layout/Footer';
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -116,7 +118,8 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-2">
+      <Navbar/>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div
@@ -127,7 +130,7 @@ const Dashboard = () => {
         >
           <div className="bg-gradient-to-br from-gray-900 to-gray-700 rounded-2xl overflow-hidden mb-6 relative">
             <img
-              src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&h=400&fit=crop"
+              src="https://img.pikbest.com/wp/202347/hands-raised-cartoon-hand-adorable-ai-robot-in-3d-rendering_9760458.jpg!sw800"
               alt="AI Technology"
               className="w-full h-64 sm:h-80 object-cover opacity-60"
             />
@@ -137,54 +140,12 @@ const Dashboard = () => {
                   Welcome to Fake News Detector
                 </h1>
                 <p className="text-lg sm:text-xl opacity-90 max-w-2xl mx-auto">
-                  Your intelligent companion in the fight against misinformation. Analyse news articles, social media posts, and multimedia content with cutting-edge AI technology.
+                  We analyses the fake news using your text, images and urls which is provided by you and we give you the accurate results to make sure about the news.
                 </p>
               </div>
             </div>
           </div>
         </motion.div>
-
-        {/* Quick Analysis Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 mb-8"
-        >
-          <div className="flex items-center space-x-2 mb-4">
-            <Search className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
-              Quick News Analysis
-            </h2>
-          </div>
-          <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-            Paste a news URL or article text for instant AI-powered fact-checking
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Input
-              placeholder="Paste news URL or article text here..."
-              value={newsUrl}
-              onChange={(e) => setNewsUrl(e.target.value)}
-              className="flex-1"
-            />
-            <Button
-              onClick={handleAnalyze}
-              isLoading={isAnalyzing}
-              disabled={!newsUrl.trim()}
-              className="sm:px-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-            >
-              <Search className="h-4 w-4 mr-2" />
-              Analyse
-            </Button>
-          </div>
-
-          <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-            Supports URLs from major news sites, social media posts, and direct text input
-          </p>
-        </motion.div>
-
-        {/* Stats Section */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {[
             { label: 'Articles Analysed', value: stats.articlesAnalysed.toLocaleString(), icon: BarChart3 },
@@ -336,6 +297,7 @@ const Dashboard = () => {
           </motion.div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

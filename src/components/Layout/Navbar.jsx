@@ -36,8 +36,8 @@ const Navbar = () => {
   };
 
   const unauthenticatedNavItems = [
-    { name: 'Features', path: '/#features' },
     { name: 'How It Works', path: '/#how-it-works' },
+    { name: 'Features', path: '/#features' },
     { name: 'Testimonials', path: '/#testimonials' },
   ];
 
